@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Principal"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nombre"
+        android:id="@+id/tvNom"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etNombre"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/tvNom" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etNombre"
+        android:layout_alignParentStart="false"
+        android:layout_marginTop="44dp"
+        android:orientation="vertical"
+        android:id="@+id/rgSexo"
+        android:layout_alignParentEnd="true">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hombre"
+            android:id="@+id/rbHombre"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mujer"
+            android:id="@+id/rbMujer"
+            android:checked="false" />
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar Datos"
+        android:id="@+id/btnEnviarDatos"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/tvDatosRecibidos"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="73dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tvDatosRecibidos"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carnet de Conducir"
+        android:id="@+id/swConducir"
+        android:checked="false"
+        android:layout_above="@+id/rBNota"
+        android:layout_toStartOf="@+id/tvDatosRecibidos" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rBNota"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/swConducir"
+        android:numStars="5"
+        android:rating="0" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sBPuntua"
+        android:layout_below="@+id/rBNota"
+        android:layout_alignStart="@+id/rBNota"
+        android:layout_marginTop="27dp"
+        android:layout_alignEnd="@+id/rBNota"
+        android:max="100"
+        android:indeterminate="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etSB"
+        android:layout_alignBottom="@+id/sBPuntua"
+        android:layout_toEndOf="@+id/sBPuntua" />
+
+</RelativeLayout>
